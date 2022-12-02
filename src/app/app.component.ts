@@ -15,7 +15,7 @@ export class AppComponent {
     'Shop for the party',
   ];
 
-  add() {
-    alert('hi');
+  add(newTask: string) {
+    alert(newTask);
   }
 }
