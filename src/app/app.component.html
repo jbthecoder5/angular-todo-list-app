@@ -7,54 +7,10 @@
       <button class="add-button">+</button>
     </div>
     <table>
-      <tr class="even">
+      <tr *ngFor="let task of tasks" class="even">
         <td>
           <pre>
-            {{ tasks[0] }}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="odd">
-        <td>
-          <pre>
-            {{ tasks[1] }}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="even">
-        <td>
-          <pre>
-            {{ tasks[2] }}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="odd">
-        <td>
-          <pre>
-            {{ tasks[3] }}
-          </pre>
-        </td>
-        <td>
-          <button class="remove-button">X</button>
-          <button class="done-button">Done</button>
-        </td>
-      </tr>
-      <tr class="even">
-        <td>
-          <pre>
-            {{ tasks[4] }}
+            {{ task }}
           </pre>
         </td>
         <td>
