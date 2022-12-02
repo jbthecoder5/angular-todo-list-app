@@ -14,4 +14,8 @@ export class AppComponent {
     'Wash the dishes',
     'Shop for the party',
   ];
+
+  add() {
+    alert('hi');
+  }
 }

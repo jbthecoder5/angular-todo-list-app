@@ -4,7 +4,7 @@
 
     <div class="input-group">
       <input type="text" placeholder="Todo" />
-      <button class="add-button">+</button>
+      <button (click)="add()" class="add-button">+</button>
     </div>
     <table>
       <tr *ngFor="let task of tasks" class="even">
