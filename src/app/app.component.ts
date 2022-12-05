@@ -19,4 +19,14 @@ export class AppComponent {
   add(newTask: string) {
     this.tasks.push(newTask);
   }
+
+  remove(existingTask: string) {
+    var userConfirmed = confirm(
+      `Are you sure that you want to remove the following task? \n "${existingTask}"`
+    );
+
+    if (userConfirmed) {
+      this.tasks = this.tasks.filter((task) => task != existingTask);
+    }
+  }
 }
