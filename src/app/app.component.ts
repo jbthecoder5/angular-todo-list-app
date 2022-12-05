@@ -15,7 +15,8 @@ export class AppComponent {
     'Shop for the party',
   ];
 
+  // adding a new array to the list
   add(newTask: string) {
-    alert(newTask);
+    this.tasks.push(newTask);
   }
 }
