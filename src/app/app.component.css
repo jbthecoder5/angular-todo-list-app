@@ -91,3 +91,7 @@ tr {
   background-color: rgb(11, 11, 11);
   color: rgb(255, 255, 255);
 }
+
+.isDone {
+  text-decoration: line-through;
+}
