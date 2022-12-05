@@ -7,20 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list';
-  tasks = [
-    'Visiting Ann',
-    'Call Dad',
-    'Go to the gym',
-    'Wash the dishes',
-    'Shop for the party',
+  tasks: Task[] = [
+    new Task('Visiting Ann'),
+    new Task('Go to the gym'),
+    new Task('Call Dad'),
+    new Task('Wash the dishes'),
+    new Task('Shop for the party'),
   ];
 
   // adding a new array to the list
   add(newTask: string) {
-    this.tasks.push(newTask);
+    this.tasks.push(new Task(newTask));
   }
 
-  remove(existingTask: string) {
+  remove(existingTask: Task) {
     var userConfirmed = confirm(
       `Are you sure that you want to remove the following task? \n "${existingTask}"`
     );
@@ -30,7 +30,13 @@ export class AppComponent {
     }
   }
 
-  markAsDone(task: string) {
-    alert('This task: "' + task + '"');
+  markAsDone(task: Task) {
+    task.isDone = true;
   }
+}
+
+class Task {
+  constructor(public title: string) {}
+
+  public isDone = false;
 }
