@@ -82,6 +82,10 @@ tr {
   justify-content: space-between;
 }
 
+td {
+  margin-left: 1rem;
+}
+
 .even {
   background-color: rgb(44, 44, 44);
   color: rgb(255, 255, 255);
