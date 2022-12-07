@@ -5,6 +5,4 @@ div {
 
 mat-calendar {
   width: 500px;
-  background-color: black; /* added this because for some odd reaason 
-  i couldn't see calendar */
 }
