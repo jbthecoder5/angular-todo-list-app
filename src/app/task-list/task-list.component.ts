@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Route } from '@angular/router';
 
 @Component({
   selector: 'task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css'],
 })
-export class TaskListComponent {
+export class TaskListComponent implements OnInit {
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    var date: Date = new Date(this.route.snapshot.params['date']);
+    console.log(date);
+  }
+
   tasks: Task[] = [
     new Task('Visiting Ann'),
     new Task('Go to the gym'),
